@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mukkera Hariprasad — Java Full Stack Developer</title>
+  <meta name="description" content="Portfolio of Mukkera Hariprasad, Java Full Stack Developer specializing in Spring Boot, React.js and MySQL.">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="#home" class="brand">Hariprasad</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-photo">
+      <img src="images/portfolio.jpg" alt="Portrait of Mukkera Hariprasad">
+    </div>
+    <p class="eyebrow" style="margin-top:24px;">Java Full Stack Developer</p>
+    <h1>Building secure, scalable applications — end to end.</h1>
+    <p class="lede">
+      Final-year Computer Science student specializing in Spring Boot,
+      React.js, and MySQL — from REST API design and JWT authentication
+      to deployed, production-ready UI.
+    </p>
+    <div class="hero-actions">
+      <a href="#work" class="btn">
+        <i class="fa-solid fa-arrow-down"></i> View my work
+      </a>
+      <a href="resume/resume.pdf" class="btn ghost" download>
+        <i class="fa-solid fa-download"></i> Download résumé
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ STAT STRIP ============ -->
+  <div class="stat-strip">
+    <div class="wrap stat-grid">
+      <div>
+        <div class="stat-num">3</div>
+        <div class="stat-label">Projects shipped</div>
+      </div>
+      <div>
+        <div class="stat-num">7.67</div>
+        <div class="stat-label">CGPA / 10</div>
+      </div>
+      <div>
+        <div class="stat-num">3</div>
+        <div class="stat-label">Certifications completed</div>
+      </div>
+      <div>
+        <div class="stat-num">2026</div>
+        <div class="stat-label">Graduating</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="wrap">
+      <p class="about-statement reveal">
+        I build full-stack applications the way I'd want to use them —
+        <span class="dim">secure by default, tested end to end,</span>
+        and deployed like they're going to production. Because usually, they are.
+      </p>
+
+      <div class="about-grid reveal">
+        <div class="about-cell">
+          <h3>Based in</h3>
+          <p>Hyderabad, Telangana</p>
+          <p class="sub">India</p>
+        </div>
+        <div class="about-cell">
+          <h3>Studying</h3>
+          <p>B.Tech, Computer Science</p>
+          <p class="sub">AVN Institute of Engineering &amp; Technology</p>
+        </div>
+        <div class="about-cell">
+          <h3>Core stack</h3>
+          <p>Java · Spring Boot</p>
+          <p class="sub">React.js · MySQL</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section" id="skills">
+    <div class="wrap">
+      <p class="section-kicker reveal">Capabilities</p>
+      <h2 class="section-title reveal">What I bring to a team</h2>
+      <p class="section-sub reveal">
+        A backend-first full-stack skill set, built around secure APIs and
+        clean, maintainable code.
+      </p>
+
+      <div class="skill-grid">
+        <div class="skill-card reveal">
+          <div class="icon"><i class="fa-solid fa-server"></i></div>
+          <h3>Backend engineering</h3>
+          <p>Spring Boot, Spring MVC, Spring Data JPA, and Hibernate — REST APIs designed with clean DTOs and layered architecture.</p>
+        </div>
+        <div class="skill-card reveal">
+          <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Security</h3>
+          <p>Spring Security with JWT authentication, role-based access control, BCrypt hashing, and stateless, CORS-safe sessions.</p>
+        </div>
+        <div class="skill-card reveal">
+          <div class="icon"><i class="fa-brands fa-react"></i></div>
+          <h3>Frontend</h3>
+          <p>React.js and TypeScript with Hooks, Router, and Context API — Tailwind CSS UI, Axios-driven data flow, built and bundled with Vite.</p>
+        </div>
+        <div class="skill-card reveal">
+          <div class="icon"><i class="fa-solid fa-database"></i></div>
+          <h3>Data</h3>
+          <p>MySQL schema design, JPA/JPQL queries, and relational modeling for multi-role applications.</p>
+        </div>
+        <div class="skill-card reveal">
+          <div class="icon"><i class="fa-solid fa-vial"></i></div>
+          <h3>Testing</h3>
+          <p>JUnit, Spring Boot Test, and MockMvc for integration and end-to-end confidence before every deploy.</p>
+        </div>
+        <div class="skill-card reveal">
+          <div class="icon"><i class="fa-brands fa-docker"></i></div>
+          <h3>DevOps</h3>
+          <p>Docker and Docker Compose, GitHub Actions CI/CD, Nginx, and deployment to Render.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WORK ============ -->
+  <section class="section" id="work">
+    <div class="wrap">
+      <p class="section-kicker reveal">Selected work</p>
+      <h2 class="section-title reveal">Projects</h2>
+      <p class="section-sub reveal">
+        Three builds spanning frontend, backend, and distributed systems.
+      </p>
+
+      <div class="work-block reveal">
+        <span class="work-tag">2026 · Deployed on Render</span>
+        <h3>FarmBridge — Farmer-to-Buyer Marketplace</h3>
+        <ul>
+          <li>Full-stack marketplace connecting farmers directly to buyers, built with Spring Boot and React.js</li>
+          <li>REST APIs covering products, orders, users, reviews, and wishlist</li>
+          <li>JWT authentication with role-based access for Admin, Farmer, and Buyer roles</li>
+          <li>Product, order, review, notification, and farmer-verification workflows</li>
+          <li>MySQL database, containerized with Docker, deployed via GitHub Actions CI/CD</li>
+        </ul>
+        <div class="work-tech">
+          <span class="pill">Spring Boot</span>
+          <span class="pill">React.js</span>
+          <span class="pill">MySQL</span>
+          <span class="pill">JWT / RBAC</span>
+          <span class="pill">Docker</span>
+          <span class="pill">GitHub Actions</span>
+          <span class="pill">Render</span>
+        </div>
+      </div>
+
+      <div class="work-block reveal">
+        <span class="work-tag">2025 · Microservices architecture</span>
+        <h3>E-Commerce Microservices Application</h3>
+        <ul>
+          <li>E-commerce system built with a microservices architecture on Spring Boot</li>
+          <li>Independent services for Products, Users, Cart, and Orders</li>
+          <li>Eureka Service Discovery for inter-service communication</li>
+          <li>RabbitMQ for asynchronous messaging between services</li>
+          <li>MySQL with JPA/Hibernate, Git/GitHub with CI/CD for deployment</li>
+        </ul>
+        <div class="work-tech">
+          <span class="pill">Spring Boot</span>
+          <span class="pill">Microservices</span>
+          <span class="pill">Eureka</span>
+          <span class="pill">RabbitMQ</span>
+          <span class="pill">MySQL</span>
+          <span class="pill">CI/CD</span>
+        </div>
+      </div>
+
+      <div class="work-block reveal">
+        <span class="work-tag">2025 · Frontend project</span>
+        <h3>Fresh Mart — Online Grocery &amp; Food Store</h3>
+        <ul>
+          <li>Responsive e-commerce frontend built with React.js, TypeScript, Vite, and Tailwind CSS, with Veg, Non-Veg, and Cafe product categories</li>
+          <li>Client-side authentication and centralized cart/order state managed with React Context API and React Hook Form</li>
+          <li>Checkout flow with delivery details, coupon-based discount calculation, and UPI QR / Cash-on-Delivery payment selection</li>
+          <li>Automatic delivery-address detection using the browser Geolocation API and OpenStreetMap Nominatim reverse geocoding</li>
+          <li>Order history and confirmation emails via EmailJS, with SweetAlert2 and React Toastify notifications</li>
+        </ul>
+        <div class="work-tech">
+          <span class="pill">React.js</span>
+          <span class="pill">TypeScript</span>
+          <span class="pill">Tailwind CSS</span>
+          <span class="pill">Context API</span>
+          <span class="pill">React Hook Form</span>
+          <span class="pill">EmailJS</span>
+          <span class="pill">OpenStreetMap API</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section class="section" id="education">
+    <div class="wrap">
+      <p class="section-kicker reveal">Background</p>
+      <h2 class="section-title reveal">Education</h2>
+
+      <div class="edu-list">
+        <div class="edu-item reveal">
+          <div class="yr">2022 — 2026</div>
+          <div>
+            <h3>B.Tech, Computer Science &amp; Engineering</h3>
+            <p>AVN Institute of Engineering and Technology · CGPA 7.67 / 10</p>
+          </div>
+        </div>
+        <div class="edu-item reveal">
+          <div class="yr">2020 — 2022</div>
+          <div>
+            <h3>Intermediate (MPC)</h3>
+            <p>Trinity Junior College, Karimnagar · 871 / 1000</p>
+          </div>
+        </div>
+        <div class="edu-item reveal">
+          <div class="yr">2019 — 2020</div>
+          <div>
+            <h3>Secondary School Certificate (SSC)</h3>
+            <p>ZPHS Garrepally · GPA 9.3 / 10</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CERTIFICATIONS ============ -->
+  <section class="section tight" id="certifications">
+    <div class="wrap">
+      <p class="section-kicker reveal">Credentials</p>
+      <h2 class="section-title reveal">Certifications</h2>
+
+      <div class="cert-row">
+        <div class="cert-card reveal">
+          <div class="yr">2025</div>
+          <h3>Career Edge – Young Professional</h3>
+          <p>TCS iON</p>
+        </div>
+        <div class="cert-card reveal">
+          <div class="yr">2025</div>
+          <h3>Generative AI</h3>
+          <p>Infosys Springboard</p>
+        </div>
+        <div class="cert-card reveal">
+          <div class="yr">2025</div>
+          <h3>Machine Learning Workshop</h3>
+          <p>Innomatics Research Labs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="contact-cta reveal">
+        <h2>Let's build something together.</h2>
+        <p>Open to full-stack developer roles and internships. Reach out — I usually reply within a day.</p>
+        <div class="contact-links">
+          <a href="mailto:mukkerahariprasad1849@gmail.com" class="btn">
+            <i class="fa-solid fa-envelope"></i> mukkerahariprasad1849@gmail.com
+          </a>
+          <a href="tel:+918985256813" class="btn ghost">
+            <i class="fa-solid fa-phone"></i> +91 89852 56813
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="wrap site-footer">
+    <span>© 2026 Mukkera Hariprasad</span>
+    <div class="foot-links">
+      <a href="https://github.com/hariprasaddev" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/hariprasadjava" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="resume/resume.pdf" download>Résumé</a>
+    </div>
+  </footer>
+
+  <button id="scrollTopBtn" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
