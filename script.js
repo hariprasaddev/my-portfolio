@@ -1,5 +1,5 @@
 /* =========================================================
-   MOBILE NAVIGATION
+   MOBILE MENU
 ========================================================= */
 
 const menuBtn = document.getElementById("menuBtn");
@@ -28,22 +28,25 @@ if (menuBtn && navLinks) {
     });
 
 
-    /* Close menu after clicking */
+    /* Close menu after clicking link */
 
-    document.querySelectorAll(".nav-links a").forEach(link => {
+    document
+        .querySelectorAll(".nav-links a")
+        .forEach(link => {
 
-        link.addEventListener("click", () => {
+            link.addEventListener("click", () => {
 
-            navLinks.classList.remove("active");
+                navLinks.classList.remove("active");
 
-            const icon = menuBtn.querySelector("i");
+                const icon =
+                    menuBtn.querySelector("i");
 
-            icon.classList.remove("fa-xmark");
-            icon.classList.add("fa-bars");
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
+
+            });
 
         });
-
-    });
 
 }
 
@@ -52,7 +55,8 @@ if (menuBtn && navLinks) {
    SCROLL TO TOP
 ========================================================= */
 
-const scrollTopBtn = document.getElementById("scrollTopBtn");
+const scrollTopBtn =
+    document.getElementById("scrollTopBtn");
 
 if (scrollTopBtn) {
 
@@ -74,11 +78,8 @@ if (scrollTopBtn) {
     scrollTopBtn.addEventListener("click", () => {
 
         window.scrollTo({
-
             top: 0,
-
             behavior: "smooth"
-
         });
 
     });
@@ -87,103 +88,24 @@ if (scrollTopBtn) {
 
 
 /* =========================================================
-   ACTIVE NAVIGATION
+   NAVBAR SCROLL EFFECT
 ========================================================= */
 
-const sections = document.querySelectorAll("section[id]");
-const navigationLinks = document.querySelectorAll(".nav-links a");
+const header =
+    document.querySelector(".site-header");
 
 window.addEventListener("scroll", () => {
 
-    let currentSection = "";
+    if (window.scrollY > 50) {
 
-    sections.forEach(section => {
+        header.style.background =
+            "rgba(0,0,0,0.90)";
 
-        const sectionTop = section.offsetTop - 120;
+    } else {
 
-        const sectionHeight = section.offsetHeight;
+        header.style.background =
+            "rgba(0,0,0,0.75)";
 
-        if (
-            window.scrollY >= sectionTop &&
-            window.scrollY < sectionTop + sectionHeight
-        ) {
-
-            currentSection = section.getAttribute("id");
-
-        }
-
-    });
-
-
-    navigationLinks.forEach(link => {
-
-        link.classList.remove("active");
-
-        if (link.getAttribute("href") === `#${currentSection}`) {
-
-            link.classList.add("active");
-
-        }
-
-    });
+    }
 
 });
-
-
-/* =========================================================
-   REVEAL ANIMATION
-========================================================= */
-
-const revealElements = document.querySelectorAll(
-    ".skill-card, .project-card, .cert-card, .timeline-item, .detail-card"
-);
-
-if ("IntersectionObserver" in window) {
-
-    const observer = new IntersectionObserver(
-        (entries) => {
-
-            entries.forEach(entry => {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.style.opacity = "1";
-                    entry.target.style.transform = "translateY(0)";
-
-                    observer.unobserve(entry.target);
-
-                }
-
-            });
-
-        },
-        {
-            threshold: 0.12
-        }
-    );
-
-
-    revealElements.forEach(element => {
-
-        element.style.opacity = "0";
-
-        element.style.transform = "translateY(25px)";
-
-        element.style.transition =
-            "opacity 0.7s ease, transform 0.7s ease";
-
-        observer.observe(element);
-
-    });
-
-} else {
-
-    revealElements.forEach(element => {
-
-        element.style.opacity = "1";
-
-        element.style.transform = "translateY(0)";
-
-    });
-
-}
