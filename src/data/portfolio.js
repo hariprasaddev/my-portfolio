@@ -73,16 +73,17 @@ export const navLinks = [
 ]
 
 export const aboutParagraphs = [
-  "I'm a final-year B.Tech CSE student (2026) and a Java Full Stack Developer. I like owning a feature end to end — from the MySQL schema, to the Spring Boot REST API, to a working React screen, to the live deployment.",
-  'My strongest area is the Spring ecosystem: Spring Boot, Spring Security with JWT and role-based access, Spring Data JPA and Hibernate. On the frontend I work with React.js, React Router, Context API, Axios and Tailwind CSS.',
-  'I care about how software is shipped, not only how it is written. FarmBridge runs in Docker on Render behind a GitHub Actions CI/CD pipeline, and my microservices e-commerce system uses Eureka for service discovery and RabbitMQ for asynchronous orders.',
+  "I'm a Computer Science graduate (B.Tech, 2026) and a Java Full Stack Developer. I enjoy owning a feature end to end, from the MySQL schema and Spring Boot REST API to a working React screen and a live deployment.",
+  'My core strength is the Spring ecosystem: Spring Boot, Spring Security with JWT and role-based access, Spring Data JPA and Hibernate. On the frontend I build with React.js, React Router, Context API, Axios and Tailwind CSS.',
+  "I care about how software is shipped, not only how it is written. FarmBridge, my multi-role marketplace, runs in Docker on Render behind a GitHub Actions CI/CD pipeline, and my e-commerce microservices use Eureka for service discovery and RabbitMQ for asynchronous order processing.",
+  "After a six-month full stack program at Student Tribe, I'm looking for a Java Full Stack Developer role where I can contribute to real products, work with an engineering team and keep growing.",
 ]
 
 export const recruiterSnapshot = {
   title: 'Recruiter snapshot',
   rows: [
     { key: 'Looking for', value: 'Java Full Stack Developer role' },
-    { key: 'Level', value: '2026 graduate, B.Tech CSE' },
+    { key: 'Level', value: 'Fresher, B.Tech CSE graduate (2026)' },
     { key: 'Core stack', value: 'Spring Boot · React.js · MySQL' },
     { key: 'Shipped', value: 'FarmBridge — live on Render with CI/CD' },
     { key: 'Training', value: '6-month full stack program (Student Tribe)' },
