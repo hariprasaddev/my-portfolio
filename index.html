@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hariprasad Mukkera | Java Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Hariprasad Mukkera, a Java Full Stack Developer skilled in Spring Boot, Spring Data JPA, MySQL and React.js. FarmBridge deployed with Docker and GitHub Actions CI/CD; e-commerce microservices with Eureka and RabbitMQ."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Apply saved theme BEFORE React loads so there is no flash -->
+    <script>
+      (function () {
+        try {
+          var override = new URLSearchParams(window.location.search).get('theme');
+          var saved = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var isDark = override ? override === 'dark' : saved ? saved === 'dark' : prefersDark;
+          if (isDark) document.documentElement.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
