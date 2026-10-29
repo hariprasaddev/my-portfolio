@@ -3,6 +3,7 @@ import { Download, Mail, MapPin, Send, Smartphone } from 'lucide-react'
 import { profile, availability } from '../data/portfolio.js'
 import Section from './Section.jsx'
 import Reveal from './Reveal.jsx'
+import { GitHubIcon, LinkedInIcon } from './icons.jsx'
 
 const initialForm = { name: '', email: '', message: '' }
 
@@ -44,6 +45,8 @@ export default function Contact() {
     { label: 'Email', value: profile.email, href: `mailto:${profile.email}`, Icon: Mail },
     { label: 'Phone', value: profile.phone, href: `tel:${profile.phone.replace(/\s/g, '')}`, Icon: Smartphone },
     { label: 'Location', value: profile.location, href: '', Icon: MapPin },
+    { label: 'GitHub', value: profile.socials.github, href: profile.socials.github, Icon: GitHubIcon, external: true },
+    { label: 'LinkedIn', value: profile.socials.linkedin, href: profile.socials.linkedin, Icon: LinkedInIcon, external: true },
   ]
 
   const inputClass = (field) =>
@@ -59,7 +62,7 @@ export default function Contact() {
         {/* Left: direct contact details */}
         <Reveal>
           <div className="space-y-4">
-            {contactRows.map(({ label, value, href, Icon }) => (
+            {contactRows.map(({ label, value, href, Icon, external }) => (
               <div
                 key={label}
                 className="flex items-start gap-4 rounded-2xl border border-slate-200 bg-white p-5 transition hover:-translate-y-0.5 hover:border-brand/50 dark:border-slate-800 dark:bg-ink-800"
@@ -72,7 +75,11 @@ export default function Contact() {
                     {label}
                   </p>
                   {href ? (
-                    <a href={href} className="mt-0.5 block break-all text-sm font-semibold text-slate-900 hover:text-brand dark:text-white dark:hover:text-brand-light">
+                    <a
+                      href={href}
+                      {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                      className="mt-0.5 block break-all text-sm font-semibold text-slate-900 hover:text-brand dark:text-white dark:hover:text-brand-light"
+                    >
                       {value}
                     </a>
                   ) : (

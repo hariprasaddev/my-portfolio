@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
-import { ExternalLink, Menu, Moon, Sun, X } from 'lucide-react'
+import { ExternalLink, Mail, Menu, Moon, Sun, X } from 'lucide-react'
 import { navLinks, profile } from '../data/portfolio.js'
 import useTheme from '../hooks/useTheme.js'
 import useActiveSection from '../hooks/useActiveSection.js'
+import { GitHubIcon, LinkedInIcon } from './icons.jsx'
 
 export default function Navbar() {
   const [dark, toggleTheme] = useTheme()
@@ -51,6 +52,26 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
+
+        {/* Desktop GitHub / LinkedIn icons next to Resume */}
+        <a
+          href={profile.socials.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          className="ml-2 text-slate-500 transition hover:text-brand dark:text-slate-400 dark:hover:text-brand-light"
+        >
+          <GitHubIcon className="h-5 w-5" />
+        </a>
+        <a
+          href={profile.socials.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          className="text-slate-500 transition hover:text-brand dark:text-slate-400 dark:hover:text-brand-light"
+        >
+          <LinkedInIcon className="h-5 w-5" />
+        </a>
 
         <div className="flex items-center gap-2">
           {/* Resume — desktop, opens the PDF in a new tab */}
@@ -118,6 +139,38 @@ export default function Navbar() {
               </a>
             </li>
           </ul>
+
+          {/* Mobile: row of GitHub / LinkedIn / Email icons */}
+          <div className="mt-3 flex items-center gap-4 border-t border-slate-100 pt-3 dark:border-slate-800">
+            <a
+              href={profile.socials.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              onClick={() => setOpen(false)}
+              className="text-slate-500 transition hover:text-brand dark:text-slate-400 dark:hover:text-brand-light"
+            >
+              <GitHubIcon className="h-5 w-5" />
+            </a>
+            <a
+              href={profile.socials.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              onClick={() => setOpen(false)}
+              className="text-slate-500 transition hover:text-brand dark:text-slate-400 dark:hover:text-brand-light"
+            >
+              <LinkedInIcon className="h-5 w-5" />
+            </a>
+            <a
+              href={`mailto:${profile.email}`}
+              aria-label={`Email ${profile.displayName}`}
+              onClick={() => setOpen(false)}
+              className="text-slate-500 transition hover:text-brand dark:text-slate-400 dark:hover:text-brand-light"
+            >
+              <Mail className="h-5 w-5" aria-hidden="true" />
+            </a>
+          </div>
         </div>
       )}
     </header>

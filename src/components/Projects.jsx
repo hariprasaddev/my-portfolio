@@ -60,13 +60,13 @@ export default function Projects() {
 
                 {/* Hidden while the URL is "" — no dead links */}
                 {(p.live || p.repo) && (
-                  <div className="mt-auto flex gap-4 pt-5">
+                  <div className="mt-auto flex flex-wrap gap-3 pt-5">
                     {p.live && (
                       <a
                         href={p.live}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand hover:underline dark:text-brand-light"
+                        className="inline-flex items-center gap-1.5 rounded-lg border border-brand/40 bg-brand/5 px-3.5 py-2 text-sm font-semibold text-brand transition hover:border-brand hover:bg-brand/10 dark:border-brand/40 dark:bg-brand/10 dark:text-brand-light dark:hover:border-brand"
                       >
                         <ExternalLink className="h-4 w-4" aria-hidden="true" />
                         Live demo
@@ -77,9 +77,9 @@ export default function Projects() {
                         href={p.repo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand hover:underline dark:text-brand-light"
+                        className="inline-flex items-center gap-1.5 rounded-lg border border-slate-300 bg-white px-3.5 py-2 text-sm font-semibold text-slate-700 transition hover:border-brand hover:text-brand dark:border-slate-600 dark:bg-ink-900 dark:text-slate-200 dark:hover:border-brand dark:hover:text-brand-light"
                       >
-                        <GitHubIcon className="h-4 w-4" />
+                        <GitHubIcon className="h-4 w-4" aria-hidden="true" />
                         Code
                       </a>
                     )}

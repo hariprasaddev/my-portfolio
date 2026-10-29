@@ -29,9 +29,9 @@ export const profile = {
   // ── PASTE YOUR LINKS HERE ("" = hidden, so nothing looks broken) ──
   socials: {
     // e.g. "https://github.com/mukkerahariprasad"
-    github: '',
+    github: 'https://github.com/hariprasaddev',
     // e.g. "https://www.linkedin.com/in/mukkerahariprasad"
-    linkedin: '',
+    linkedin: 'https://linkedin.com/in/hariprasadjava',
   },
 
   summary:
@@ -164,7 +164,7 @@ export const projects = [
     tech: ['Spring Boot', 'React', 'MySQL', 'Docker', 'GitHub Actions'],
     // ── PASTE YOUR LINKS HERE ──
     live: 'https://farmbridge-frontend.onrender.com', // already live
-    repo: '', // e.g. "https://github.com/<you>/farmbridge"
+    repo: 'https://github.com/hariprasaddev/FarmBridge',
   },
   {
     id: 'microservices',
@@ -184,7 +184,7 @@ export const projects = [
     ],
     tech: ['Spring Boot', 'Eureka', 'RabbitMQ', 'MySQL', 'Spring Data JPA'],
     live: '',
-    repo: '', // e.g. "https://github.com/<you>/ecommerce-microservices"
+    repo: 'https://github.com/hariprasaddev/microservices-eureka-main',
   },
   {
     id: 'mystore',
@@ -203,8 +203,8 @@ export const projects = [
       'Axios calls to backend REST APIs; deployed on Vercel.',
     ],
     tech: ['React.js', 'React Router', 'Context API', 'Axios', 'Vercel'],
-    live: '', // e.g. "https://my-store-app-yourname.vercel.app"
-    repo: '', // e.g. "https://github.com/<you>/my-store-app"
+    live: 'https://my-store-app-sigma.vercel.app',
+    repo: 'https://github.com/hariprasaddev/my-store-app',
   },
 ]
 

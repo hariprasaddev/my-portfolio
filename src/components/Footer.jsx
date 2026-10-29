@@ -1,4 +1,4 @@
-import { ArrowUp } from 'lucide-react'
+import { ArrowUp, Mail } from 'lucide-react'
 import { profile } from '../data/portfolio.js'
 import { GitHubIcon, LinkedInIcon } from './icons.jsx'
 
@@ -16,9 +16,8 @@ export default function Footer() {
           <p className="text-xs text-slate-500 dark:text-slate-400">
             © {new Date().getFullYear()} {profile.fullName}
           </p>
-        </div>
 
-        <div className="flex items-center gap-4">
+          {/* GitHub / LinkedIn / Email next to the copyright text */}
           {profile.socials.github && (
             <a
               href={profile.socials.github}
@@ -42,12 +41,20 @@ export default function Footer() {
             </a>
           )}
           <a
-            href="#hero"
-            className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 px-4 py-2 text-xs font-semibold text-slate-600 transition hover:border-brand hover:text-brand dark:border-slate-700 dark:text-slate-300"
+            href={`mailto:${profile.email}`}
+            aria-label={`Email ${profile.displayName}`}
+            className="text-slate-400 transition hover:text-brand dark:hover:text-brand-light"
           >
-            Back to top <ArrowUp className="h-3.5 w-3.5" aria-hidden="true" />
+            <Mail className="h-5 w-5" aria-hidden="true" />
           </a>
         </div>
+
+        <a
+          href="#hero"
+          className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 px-4 py-2 text-xs font-semibold text-slate-600 transition hover:border-brand hover:text-brand dark:border-slate-700 dark:text-slate-300"
+        >
+          Back to top <ArrowUp className="h-3.5 w-3.5" aria-hidden="true" />
+        </a>
       </div>
     </footer>
   )
