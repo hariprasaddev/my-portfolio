@@ -59,7 +59,9 @@ export default function Hero() {
                     <a
                       key={label}
                       href={url}
-                      {...(isDownload ? { download: 'Hariprasad_Mukkera_Resume.pdf' } : {})}
+                      {...(isDownload
+                        ? { download: 'Hariprasad_Mukkera_Resume.pdf', target: '_blank', rel: 'noopener noreferrer' }
+                        : {})}
                       className={`inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold transition ${
                         kind === 'primary' &&
                         'bg-brand text-white shadow-sm shadow-brand/30 hover:-translate-y-0.5 hover:bg-brand-dark'

@@ -77,6 +77,7 @@ export default function Navbar() {
           {/* Resume — desktop, opens the PDF in a new tab */}
           <a
             href={profile.resume}
+            download="Hariprasad_Mukkera_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-brand hover:text-brand md:flex dark:border-slate-700 dark:bg-ink-800 dark:text-slate-200 dark:hover:text-brand-light"
@@ -129,6 +130,7 @@ export default function Navbar() {
             <li>
               <a
                 href={profile.resume}
+                download="Hariprasad_Mukkera_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setOpen(false)}

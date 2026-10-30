@@ -135,9 +135,10 @@ export const experience = [
     orgInitials: 'ST',
     period: 'Mar 2026 – Sep 2026',
     points: [
-      'Completed a 6-month hands-on full stack development program covering Java, Spring Boot, React.js and MySQL.',
-      'Built the React.js frontend of an e-commerce application with product browsing, cart, wishlist and payment-order workflow, and deployed it on Vercel.',
-      'Followed Git and GitHub workflows, committing and pushing code in stages across multiple repositories.',
+      'Completed a 6-month hands-on Full Stack Development program at Student Tribe, covering Java, Spring Boot, React.js and MySQL.',
+      'Practiced building REST APIs with Spring Boot and Spring Data JPA, and consuming them from a React.js frontend using Axios.',
+      'Used Git and GitHub daily, committing and pushing code in stages across multiple repositories.',
+      'Applied the training by building and deploying FarmBridge and an e-commerce frontend (see Projects).',
     ],
     tech: ['Java', 'Spring Boot', 'React.js', 'MySQL'],
   },

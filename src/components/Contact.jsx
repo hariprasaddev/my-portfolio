@@ -93,6 +93,8 @@ export default function Contact() {
             <a
               href={profile.resume}
               download="Hariprasad_Mukkera_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-white px-5 py-4 text-sm font-semibold text-slate-700 transition hover:-translate-y-0.5 hover:border-brand hover:text-brand dark:border-slate-800 dark:bg-ink-800 dark:text-slate-200 dark:hover:text-brand-light"
             >
               <Download className="h-4 w-4" aria-hidden="true" />
